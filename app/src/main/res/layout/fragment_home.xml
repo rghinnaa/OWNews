@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/clHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapsingToolbarHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvHeadline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24dp"
+                        android:layout_marginTop="@dimen/_16dp"
+                        android:text="@string/title_headline"
+                        android:textAppearance="@style/TextAppearance.Octarine.Bold.Headline5"
+                        android:textColor="@color/pickled_bluewood"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24dp"
+                        android:layout_marginTop="@dimen/_2dp"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:text="@string/title_today"
+                        android:textAppearance="@style/TextAppearance.Octarine.Light.Subtitle2"
+                        android:textColor="@color/silver_chalice"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHeadline" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvCountry"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="@dimen/_0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvDay"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvHeadline"
+                        app:strokeColor="@color/pickled_bluewood"
+                        app:strokeWidth="@dimen/_1dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvCountry"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginEnd="@dimen/_16dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:drawableEnd="@drawable/ic_arrow_bottom"
+                            android:drawablePadding="@dimen/_8dp"
+                            android:drawableTint="@color/pickled_bluewood"
+                            android:gravity="center_vertical"
+                            android:text="@string/country"
+                            android:textAppearance="@style/TextAppearance.Octarine.Light.Caption"
+                            android:textColor="@color/silver_chalice" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivTrending"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="@dimen/_0dp"
+                        android:layout_marginStart="@dimen/_24dp"
+                        android:layout_marginTop="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:scaleType="centerCrop"
+                        app:layout_constraintDimensionRatio="16:9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDay"
+                        app:shapeAppearanceOverlay="@style/roundedCornerImageView" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvTrending"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_12dp"
+                        android:layout_marginTop="@dimen/_12dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        app:cardBackgroundColor="@color/coral_tree"
+                        app:cardCornerRadius="@dimen/_200sdp"
+                        app:cardElevation="@dimen/_0dp"
+                        app:layout_constraintStart_toStartOf="@id/ivTrending"
+                        app:layout_constraintTop_toTopOf="@id/ivTrending"
+                        app:strokeWidth="@dimen/_0dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvTrending"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/_12dp"
+                            android:layout_marginTop="@dimen/_8dp"
+                            android:layout_marginEnd="@dimen/_12dp"
+                            android:layout_marginBottom="@dimen/_8dp"
+                            android:text="@string/trending"
+                            android:textAppearance="@style/TextAppearance.Octarine.Light.Caption"
+                            android:textColor="@color/white" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTrendingTitle"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24dp"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:justificationMode="inter_word"
+                        android:textAppearance="@style/TextAppearance.Nunito.Bold.Body1"
+                        android:textColor="@color/pickled_bluewood"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivTrending"
+                        tools:ignore="UnusedAttribute" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTrendingSource"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_24dp"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:drawablePadding="@dimen/_4dp"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.Nunito.Light.Caption"
+                        android:textColor="@color/silver_chalice"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTrendingTitle" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTrendingDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8dp"
+                        android:layout_marginEnd="@dimen/_24dp"
+                        android:drawableStart="@drawable/ic_date"
+                        android:drawablePadding="@dimen/_4dp"
+                        android:gravity="center"
+                        android:textAppearance="@style/TextAppearance.Nunito.Light.Caption"
+                        android:textColor="@color/silver_chalice"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTrendingTitle" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategory"
+                        android:layout_width="@dimen/_0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_8dp"
+                        android:layout_marginTop="@dimen/_24dp"
+                        android:layout_marginEnd="@dimen/_8dp"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvTrendingDate"
+                        app:spanCount="4" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/vpHeadlinePagination"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerHome"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/shimmerTitle"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/shimmerSubTitle"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerTitle" />
+
+            <View
+                android:id="@+id/shimmerCountry"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_8dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerSubTitle" />
+
+            <View
+                android:id="@+id/shimmerImage"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerCountry" />
+
+            <View
+                android:id="@+id/shimmerContent1"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerImage" />
+
+            <View
+                android:id="@+id/shimmerContent2"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerContent1" />
+
+            <View
+                android:id="@+id/shimmerContent3"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerContent2" />
+
+            <View
+                android:id="@+id/shimmerContent4"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerContent3" />
+
+            <View
+                android:id="@+id/shimmerContent5"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_loading_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shimmerContent4" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

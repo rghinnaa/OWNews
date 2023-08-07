@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bookmark"
+    app:startDestination="@id/bookmark_fragment">
+
+    <fragment
+        android:id="@+id/bookmark_fragment"
+        android:name="com.akb.ownews.ui.bookmark.BookmarkFragment"
+        android:label="Bookmark"
+        tools:layout="@layout/fragment_bookmark">
+
+        <action
+            android:id="@+id/actionDetailNews"
+            app:destination="@id/detail_news_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_news_fragment"
+        android:name="com.akb.ownews.ui.detail.DetailNewsFragment"
+        android:label="Detail News"
+        tools:layout="@layout/fragment_detail_news">
+
+        <argument
+            android:name="data"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/actionNews"
+            app:destination="@id/news_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/news_fragment"
+        android:name="com.akb.ownews.ui.detail.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news">
+
+        <argument
+            android:name="url"
+            app:argType="string" />
+
+    </fragment>
+
+</navigation>

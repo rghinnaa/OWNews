@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:contentDescription="@string/cd_home"
+        android:icon="@drawable/slr_home_navigation"
+        android:title="@string/home" />
+
+    <item
+        android:id="@+id/search"
+        android:contentDescription="@string/cd_search"
+        android:icon="@drawable/slr_search_navigation"
+        android:title="@string/search" />
+
+    <item
+        android:id="@+id/bookmark"
+        android:contentDescription="@string/cd_bookmark"
+        android:icon="@drawable/slr_bookmark_navigation"
+        android:title="@string/bookmark" />
+
+</menu>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="pickled_bluewood">#2D4356</color>
+    <color name="pickled_bluewood_50">#DBE1E6</color>
+    <color name="fiord">#435B66</color>
+    <color name="coral_tree">#A76F6F</color>
+    <color name="zinnwaldite">#EAB2A0</color>
+    <color name="alto">#D9D9D9</color>
+    <color name="silver_chalice">#9F9F9F</color>
+</resources>

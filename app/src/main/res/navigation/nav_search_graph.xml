@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search"
+    app:startDestination="@id/search_fragment">
+
+    <fragment
+        android:id="@+id/search_fragment"
+        android:name="com.akb.ownews.ui.search.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/actionDetailNews"
+            app:destination="@id/detail_news_fragment" />
+
+        <action
+            android:id="@+id/actionFilterCategory"
+            app:destination="@id/filter_category_fragment" />
+
+        <action
+            android:id="@+id/actionFilterSource"
+            app:destination="@id/filter_source_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detail_news_fragment"
+        android:name="com.akb.ownews.ui.detail.DetailNewsFragment"
+        android:label="Detail News"
+        tools:layout="@layout/fragment_detail_news">
+
+        <argument
+            android:name="data"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/actionNews"
+            app:destination="@id/news_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/news_fragment"
+        android:name="com.akb.ownews.ui.detail.NewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_news">
+
+        <argument
+            android:name="url"
+            app:argType="string" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/filter_category_fragment"
+        android:name="com.akb.ownews.ui.search.bottomsheet.FilterCategoryFragment"
+        tools:layout="@layout/fragment_filter_category">
+
+        <argument
+            android:name="categoryFilter"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+
+    </dialog>
+
+    <dialog
+        android:id="@+id/filter_source_fragment"
+        android:name="com.akb.ownews.ui.search.bottomsheet.FilterSourceFragment"
+        tools:layout="@layout/fragment_filter_source" >
+
+        <argument
+            android:name="sources"
+            app:argType="string" />
+
+        <argument
+            android:name="sourceFilter"
+            app:argType="string"
+            android:defaultValue="@null"
+            app:nullable="true" />
+
+    </dialog>
+
+</navigation>

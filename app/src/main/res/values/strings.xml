@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">OWNews</string>
+    <string name="title_own">OWN</string>
+    <string name="title_sub_own">On World News</string>
+    <string name="skip">skip</string>
+    <string name="title_headline">Headline</string>
+    <string name="title_today">Today, %s</string>
+    <string name="trending">Trending</string>
+    <string name="hint_search">Search</string>
+    <string name="category">Category</string>
+    <string name="source">Source</string>
+    <string name="country">Country</string>
+    <string name="title_bookmark">Bookmark</string>
+    <string name="read_full_article">Read Full Article</string>
+    <string name="cd_home">Home</string>
+    <string name="home">Home</string>
+    <string name="cd_search">Search</string>
+    <string name="search">Search</string>
+    <string name="cd_bookmark">Bookmark</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="retry">Retry</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="share_to">Share To :</string>
+    <string name="share_template">%s\n\nRead top headlines in our app OWN (On World News)\nDownload app :</string>
+    <string name="empty_data">Data tidak tersedia</string>
+    <string name="on_boarding_title_1">News Everyday</string>
+    <string name="on_boarding_desc_1">Get news everyday from trusted sources we’ve provide</string>
+    <string name="on_boarding_title_2">Lastest Information</string>
+    <string name="on_boarding_desc_2">Get lastest update about what’s happening in the world</string>
+    <string name="on_boarding_title_3">Start Your Journey!</string>
+    <string name="on_boarding_desc_3">Let’s start your journey to know more about what’s happening right now</string>
+</resources>

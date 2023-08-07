@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/MaterialToolbar"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:background="@color/white"
+        android:elevation="@dimen/_4dp"
+        app:contentInsetStartWithNavigation="0dp"
+        tools:title="Ini Title" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zinnwaldite"
+        android:gravity="center"
+        android:paddingTop="@dimen/_0dp"
+        android:paddingBottom="@dimen/_0dp"
+        android:textAppearance="@style/TextAppearance.Octarine.Bold.Headline6"
+        android:textColor="@color/coral_tree" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/navHostContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_65sdp"
+        android:elevation="@dimen/_8dp"
+        android:background="@color/pickled_bluewood_50"
+        app:itemTextAppearanceActive="@style/TextAppearance.Octarine.Light.Caption"
+        app:itemTextAppearanceInactive="@style/TextAppearance.Octarine.Light.Caption"
+        app:labelVisibilityMode="auto"
+        app:menu="@menu/menu_bottom_nav" />
+
+</LinearLayout>

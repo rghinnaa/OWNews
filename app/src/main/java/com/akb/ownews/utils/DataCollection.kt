@@ -1,0 +1,73 @@
+package com.akb.ownews.utils
+
+import com.akb.ownews.R
+import com.akb.ownews.data.model.CategoryModel
+
+object DataCollection {
+    val category = listOf(
+        CategoryModel(R.drawable.ic_business, "Business", "business"),
+        CategoryModel(R.drawable.ic_entertainment, "Entertainment", "entertainment"),
+        CategoryModel(R.drawable.ic_general, "General", "general"),
+        CategoryModel(R.drawable.ic_health, "Health", "health"),
+        CategoryModel(R.drawable.ic_science, "Science", "science"),
+        CategoryModel(R.drawable.ic_science, "Sports", "sports"),
+        CategoryModel(R.drawable.ic_technology, "Technology", "technology")
+    )
+
+    val country = listOf(
+        "us",
+        "ae",
+        "ar",
+        "at",
+        "au",
+        "be",
+        "bg",
+        "br",
+        "ca",
+        "ch",
+        "cn",
+        "co",
+        "cu",
+        "cz",
+        "de",
+        "eg",
+        "fr",
+        "gb",
+        "gr",
+        "hk",
+        "hu",
+        "id",
+        "ie",
+        "il",
+        "in",
+        "it",
+        "jp",
+        "kr",
+        "lt",
+        "lv",
+        "ma",
+        "mx",
+        "my",
+        "ng",
+        "nl",
+        "no",
+        "nz",
+        "ph",
+        "pl",
+        "pt",
+        "ro",
+        "rs",
+        "ru",
+        "sa",
+        "se",
+        "sg",
+        "si",
+        "sk",
+        "th",
+        "tr",
+        "tw",
+        "ua",
+        "ve",
+        "za",
+    )
+}

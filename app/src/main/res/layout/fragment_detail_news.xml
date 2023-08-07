@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivNews"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="8:8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vBackground"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/bg_gradient_black"
+        app:layout_constraintBottom_toBottomOf="@id/ivNews"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+    <ImageButton
+        android:id="@+id/ibBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginTop="@dimen/_24dp"
+        android:background="@color/transparent"
+        android:src="@drawable/ic_chevron_left_24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitle"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_8dp"
+        android:paddingTop="@dimen/_50sdp"
+        android:textAppearance="@style/TextAppearance.Nunito.Bold.Body1"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/tvWriter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:drawableStart="@drawable/ic_date"
+        android:drawablePadding="@dimen/_4dp"
+        android:drawableTint="@color/white"
+        android:textAppearance="@style/TextAppearance.Nunito.Light.Caption"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/cvNews"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvWriter"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_24dp"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:layout_marginEnd="@dimen/_16dp"
+        android:textAppearance="@style/TextAppearance.Nunito.Light.Caption"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@id/tvDate"
+        app:layout_constraintBottom_toTopOf="@id/cvNews"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glNews"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cvNews"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/bg_news"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/glNews">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:textAppearance="@style/TextAppearance.Nunito.Light.Body2"
+            android:textColor="@color/silver_chalice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_18dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_share"
+            app:layout_constraintEnd_toStartOf="@id/ibBookmark"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/ibBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:background="@color/transparent"
+            android:src="@drawable/ic_bookmark_news"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNews"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:justificationMode="inter_word"
+            android:lineHeight="20dp"
+            android:textAppearance="@style/TextAppearance.Nunito.Light.Caption"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvSource" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRead"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_24dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:backgroundTint="@color/coral_tree"
+            android:insetTop="@dimen/_0dp"
+            android:insetBottom="@dimen/_0dp"
+            android:padding="@dimen/_12dp"
+            android:text="@string/read_full_article"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.Octarine.Bold.Caption"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvNews" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
