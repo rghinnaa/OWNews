@@ -21,7 +21,7 @@
     <string name="retry">Retry</string>
     <string name="error_occurred">An error occurred</string>
     <string name="share_to">Share To :</string>
-    <string name="share_template">%s\n\nRead top headlines in our app OWN (On World News)\nDownload app :</string>
+    <string name="share_template">%s\n\nRead top headlines in our app OWN (On World News)\nDownload app : https://rghinnaa.itch.io/ownews</string>
     <string name="empty_data">Data tidak tersedia</string>
     <string name="on_boarding_title_1">News Everyday</string>
     <string name="on_boarding_desc_1">Get news everyday from trusted sources we’ve provide</string>
