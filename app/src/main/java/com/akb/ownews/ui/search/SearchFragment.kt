@@ -48,7 +48,6 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
         super.onViewCreated(view, savedInstanceState)
 
         binding.rvSearch.apply {
-            isNestedScrollingEnabled = true
             adapter = searchAdapter.withLoadStateFooter(
                 PagingLoadStateAdapter { searchAdapter.retry() }
             )
@@ -68,11 +67,9 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
 
     private fun initAdapterListener() {
         searchAdapter.setOnItemClickListener {
-            if(view != null) {
-                navController.navigateOrNull(
-                    SearchFragmentDirections.actionDetailNews(Gson().toJson(it))
-                )
-            }
+            navController.navigateOrNull(
+                SearchFragmentDirections.actionDetailNews(Gson().toJson(it))
+            )
         }
         searchAdapter.setOnShareClickListener {
             initShare(it)

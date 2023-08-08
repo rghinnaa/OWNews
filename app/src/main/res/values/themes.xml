@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.OWNews" parent="Theme.Material3.Light.NoActionBar">
+    <style name="Base.Theme.OWNews" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="colorPrimary">@color/pickled_bluewood</item>
+        <item name="android:statusBarColor">@color/pickled_bluewood</item>
+
     </style>
 
     <style name="Theme.OWNews" parent="Base.Theme.OWNews" />

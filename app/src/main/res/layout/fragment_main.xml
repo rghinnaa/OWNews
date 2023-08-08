@@ -36,9 +36,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_65sdp"
+        android:layout_height="wrap_content"
         android:elevation="@dimen/_8dp"
-        android:background="@color/pickled_bluewood_50"
         app:itemTextAppearanceActive="@style/TextAppearance.Octarine.Light.Caption"
         app:itemTextAppearanceInactive="@style/TextAppearance.Octarine.Light.Caption"
         app:labelVisibilityMode="auto"

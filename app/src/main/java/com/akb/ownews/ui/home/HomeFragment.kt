@@ -118,7 +118,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                         TODO("VERSION.SDK_INT < O")
                     }
 
-                    val date = java.util.Date.from(instant)
+                    val date = Date.from(instant)
 
                     binding.tvTrendingDate.textOrNull = dateFormatter(formatDate).format(date)
                 }
